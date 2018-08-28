@@ -1,0 +1,47 @@
+<div data-target="#modal" data-dismiss="modal">
+<div class="row">
+  <div class="col-sm-12 col-md-10 col-lg-12 mx-auto" style="background-color: white">
+    <div class="chk-block">
+      <div class="chk-block-content">
+        <div class="table-responsive">
+          <table class="table table-striped table-hover table-bordered">
+            <thead>
+            <tr>
+              <th>Label</th>
+              <th>Price</th>
+              <th>Quantité</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+         <tr *ngFor="let p of products">
+              <td>{{p.label}}</td>
+              <td>{{p.price}}</td>
+              <td>{{p.quantity}}</td>
+            <td><button (click)="select(p)" class="btn-success">Edit</button>
+            <button (click)="deleteProduct(p)" class="btn-warning">Delete</button>
+              <button (click)="selectImage(p.image_url)" data-toggle="modal" data-target="#img" class="btn-info" *ngIf="p.image_url">View</button>
+            </td>
+         </tr>
+
+            </tbody>
+<tfoot>
+<tr><button (click)="toggle()" class="btn-info">Add new</button></tr>
+</tfoot>
+          </table>
+        </div>
+      </div>
+      <div>
+<app-single-product [produit]="selectedProduct" (refreshList)="ngOnInit()"  *ngIf="addnew"></app-single-product>
+   <button (click)="hide()" *ngIf="addnew" class="btn-warning" style="margin: 10px">Cancel</button>
+        <br/>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal" data-dismiss="modal" data-target="#img" id="img">
+
+  <img src="{{img}}" style="width: 50%; height: 50%;margin-left: 300px; margin-top: 200px">
+</div>
+</div>

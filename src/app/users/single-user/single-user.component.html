@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-lg-12 col-xl-8">
+    <div class="chk-block" (keyup.enter)="addUser()" >
+      <div class="chk-block-content">
+        <div class="chk-block-title">
+
+        </div>
+        <div class="form-group">
+
+          <input type="text"  class="form-control" [(ngModel)]="user.firstName" id="formInputfirst" placeholder="Prénom">
+
+        </div>
+
+        <div class="form-group">
+          <input  type="text" class="form-control" [(ngModel)]="user.lastName" id="formInputlast" placeholder="Nom">
+          <!--   <small  class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+        </div>
+
+
+        <div class="input-group form-group" (keyup)="checkEmail()" (blur)="checkEmail()" (keypress)="checkEmail()">
+          <span class="input-group-addon" id="basic-addon1">@</span>
+          <input type="email" class="form-control" #email="ngModel" email [(ngModel)]="user.email" placeholder="Addresse E-mail" aria-describedby="basic-addon1">
+        </div>
+        <div class="chk-block-content">
+
+
+          <input  placeholder="Mot de passe" [(ngModel)]="password" type="password" id="inputPassword5" class="form-control">
+        </div>
+        <div class="chk-block-content">
+          <input  placeholder="Confirmer mot de passe" [(ngModel)]="passwordConfirm" type="password" id="inputPassword5c" class="form-control" >
+
+        </div>
+        <button  type="button" [disabled]="canSubmit() || ((email.value !== '')&& (email.untouched) &&  email.invalid)" (click)="addUser()" class="btn btn-primary btn-lg btn-block mb-3">Confirmer & Valider</button>
+     <!--</div>-->
+
+    </div>
+
+  </div>
+
+
+    <!--<div class="btn-group btn-group-sm mr-2 mb-3 container" role="group" aria-label="Actions" [style]="centered">-->
+      <!--<label>      Actions:-->
+        <!--<br/>-->
+        <!--<button type="button" class="btn btn-primary" >Annuler</button>-->
+        <!--<button type="button" class="btn btn-primary" >Valider</button>-->
+      <!--</label>-->
+    <!--</div>-->
+
+  </div>
+
+</div>
+

@@ -1,0 +1,102 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "erp-web"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css",
+        "assets/plugins/morris/morris.css",
+        "assets/css/bootstrap.min.css",
+        "assets/css/core.css",
+        "assets/css/components.css",
+        "assets/css/icons.css",
+        "assets/css/pages.css",
+        "assets/css/menu.css",
+        "assets/css/responsive.css",
+        "assets/css/dataTables.bootstrap.min.css",
+        "assets/plugins/datatables/jquery.dataTables.min.css",
+        "../node_modules/ng-busy/src/style/busy.css",
+        "assets/plugins/multiselect/css/multi-select.css",
+        "assets/plugins/select2/dist/css/select2.css",
+        "assets/plugins/select2/dist/css/select2-bootstrap.css",
+        "assets/plugins/Buttons-1.5.1/css/buttons.dataTables.css"
+      ],
+      "scripts": [
+        "assets/js/modernizr.min.js",
+        "assets/js/jquery.min.js",
+        "assets/js/bootstrap.min.js",
+        "assets/js/detect.js",
+        "assets/js/fastclick.js",
+        "assets/js/jquery.blockUI.js",
+        "assets/js/waves.js",
+        "assets/js/jquery.nicescroll.js",
+        "assets/js/jquery.slimscroll.js",
+        "assets/js/jquery.scrollTo.min.js",
+        "assets/plugins/jquery-knob/jquery.knob.js",
+        "assets/js/jquery.core.js",
+        "assets/js/jquery.app.js",
+        "assets/plugins/datatables/jquery.dataTables.min.js",
+        "assets/js/dataTables.bootstrap.min.js",
+        "assets/plugins/multiselect/js/jquery.multi-select.js",
+        "assets/plugins/select2/dist/js/select2.min.js",
+        "../node_modules/sweetalert/dist/sweetalert.min.js",
+        "assets/plugins/Buttons-1.5.1/js/dataTables.buttons.js",
+        "assets/plugins/JSZip-2.5.0/jszip.min.js",
+        "assets/plugins/pdfmake-0.1.32/pdfmake.min.js",
+        "assets/plugins/pdfmake-0.1.32/vfs_fonts.js",
+        "assets/plugins/Buttons-1.5.1/js/buttons.flash.js",
+        "assets/plugins/Buttons-1.5.1/js/buttons.colVis.js",
+        "assets/plugins/Buttons-1.5.1/js/buttons.print.js",
+        "assets/plugins/Buttons-1.5.1/js/buttons.html5.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

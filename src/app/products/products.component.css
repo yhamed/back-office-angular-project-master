@@ -1,0 +1,30 @@
+.search-modal {
+.modal-dialog {
+  max-width: 100%;
+  width: 100%;
+}
+.search-list {
+  list-style: none;
+  padding: 0;
+a {
+  color: $white;
+  font-size: 1.2rem;
+.search-filter {
+  font-weight: 700;
+}
+}
+}
+.square-50 {
+  float: left;
+}
+.close {
+  cursor: pointer;
+  font-size: 5rem;
+  outline: medium none;
+  right: 6%;
+  z-index: 55;
+}
+span {
+  color: $white;
+}
+}
